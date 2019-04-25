@@ -1,30 +1,42 @@
 <?php
 
 $saldytuvas = [
-    'pienas' => [
-        'kiekis' => 1,  
+    'virsutine_lentyna' => [
+        'slot1' => [
+            'produktas' => 'Kiausiniai',
+            'kiekis' => 3,  
     ],
-    'kaiusiniai' => [
-        'kiekis' => 3,  
+        'slot2' => [
+            'produktas' => 'Grietine',
+            'kiekis' => 1,  
     ],
-    'grietine' => [
-        'kiekis' => 1,  
+        'slot3' => [
+            'produktas' => 'Jogurtas',
+            'kiekis' => 2,  
     ],
-    'jogurtas' => [
-        'kiekis' => 2,  
+        'slot4' => [
+            'produktas' => 'Zuvis',
+            'kiekis' => 0,  
     ],
-    'kefyras' => [
-        'kiekis' => 0,  
-    ],
-    'degtine' => [
-        'kiekis' => 2,  
-    ],
-    'zuvis' => [
-        'kiekis' => 0,  
-    ],
-    'kecupas' => [
-        'kiekis' => 2,  
-    ],
+   ],
+    'apatine_lentyna' => [
+        'slot1' => [
+            'produktas' => 'Pienas',
+            'kiekis' => 1,  
+        ],
+        'slot2' => [
+            'produktas' => 'Kefyras',
+            'kiekis' => 0,  
+        ],
+        'slot3' => [
+            'produktas' => 'Degtine',
+            'kiekis' => 2,  
+        ],
+        'slot4' => [
+            'produktas' => 'Kecupas',
+            'kiekis' => 2,  
+        ],
+    ]
 ];
 
 var_dump($saldytuvas);
