@@ -1,23 +1,32 @@
 <?php
 
-$thing = [
-    'array0' => [
-        'thing' => 'Telefonas',  
-        'owner' => 'Petras Pizdzius',
-        'status' => 'Prapistas',
+$saldytuvas = [
+    'pienas' => [
+        'kiekis' => 1,  
     ],
-    'array1' => [
-        'thing' => 'Buljonas', 
-        'owner' => 'Tomas Ablomas',
-        'status' => 'Naudojamas',
+    'kaiusiniai' => [
+        'kiekis' => 3,  
     ],
-    'array2' => [
-        'thing' => 'Rulonas', 
-        'owner' => 'Ana Shitkova',
-        'status' => 'Pasibaiges',
+    'grietine' => [
+        'kiekis' => 1,  
+    ],
+    'jogurtas' => [
+        'kiekis' => 2,  
+    ],
+    'kefyras' => [
+        'kiekis' => 0,  
+    ],
+    'degtine' => [
+        'kiekis' => 2,  
+    ],
+    'zuvis' => [
+        'kiekis' => 0,  
+    ],
+    'kecupas' => [
+        'kiekis' => 2,  
     ],
 ];
 
-var_dump($thing);
+var_dump($saldytuvas);
 
 ?>
