@@ -1,11 +1,11 @@
 <?php
 
+$maistas = [
+    'du dideli kiausiniai',
+    'vienas mazas baklazanas',
+    'vienas didelis grietines indelis'
+]; 
 
-
-
-$array = ['Obuolys', 'Apelsinas', 'Cukinija'];
-        
-        var_dump($array);
-
+var_dump($maistas);
 
 ?>
