@@ -1,11 +1,10 @@
 <?php
 
 $maistas = [
-    'du dideli kiausiniai',
-    'vienas mazas baklazanas',
-    'vienas didelis grietines indelis'
+   'kiausinis' => 'du dideli kiausiniai',
+   'baklazanas' => 'vienas mazas baklazanas',
+   'grietine' => 'vienas didelis grietines indelis'
 ]; 
-
 var_dump($maistas);
 
 ?>
