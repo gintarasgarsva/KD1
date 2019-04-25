@@ -1,17 +1,20 @@
 <?php
 
 $thing = [
-    'telefonas' => [
+    'array0' => [
+        'thing' => 'Telefonas',  
         'owner' => 'Petras Pizdzius',
-        'status' => 'prapistas',
+        'status' => 'Prapistas',
     ],
-    'buljonas' => [
+    'array1' => [
+        'thing' => 'Buljonas', 
         'owner' => 'Tomas Ablomas',
-        'status' => 'naudojamas',
+        'status' => 'Naudojamas',
     ],
-    'rulonas' => [
-        'owner' => 'Ana Ahitkova',
-        'status' => 'pasibaiges',
+    'array2' => [
+        'thing' => 'Rulonas', 
+        'owner' => 'Ana Shitkova',
+        'status' => 'Pasibaiges',
     ],
 ];
 
