@@ -1,10 +1,20 @@
 <?php
 
-$maistas = [
-   'kiausinis' => 'du dideli kiausiniai',
-   'baklazanas' => 'vienas mazas baklazanas',
-   'grietine' => 'vienas didelis grietines indelis'
-]; 
-var_dump($maistas);
+$thing = [
+    'telefonas' => [
+        'owner' => 'Petras Pizdzius',
+        'status' => 'prapistas',
+    ],
+    'buljonas' => [
+        'owner' => 'Tomas Ablomas',
+        'status' => 'naudojamas',
+    ],
+    'rulonas' => [
+        'owner' => 'Ana Ahitkova',
+        'status' => 'pasibaiges',
+    ],
+];
+
+var_dump($thing);
 
 ?>
