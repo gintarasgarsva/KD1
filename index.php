@@ -23,13 +23,19 @@
             'Samagonas',
             'Antradienis'
         ];
+        
+        $rand_flashback1 = rand(0, count($draugo_atmintis) - 1);
+        $flashback_text1 = '#' .$rand_flashback1 . ': ' . $draugo_atmintis[$rand_flashback1] ;
+        
 	$rand_flashback = rand(0, count($mano_atmintis) - 1);
         $flashback_text = '#' .$rand_flashback . ': ' . $mano_atmintis[$rand_flashback] ;
+        
+        $bendri_atsiminimai = array_intersect( $mano_atmintis, $draugo_atmintis);
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Klases daras</title>
+	<title>PENKTADIENIS</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -51,6 +57,14 @@
             </li>
             <?php endforeach; ?>
         </ul><!-- endforeach -->
-	<?php print $flashback_text; ?>
+        <h3>Sutape prisiminimai:</h3>
+        <ul> <?php foreach($bendri_atsiminimai as $value): ?>
+            <li>
+               <?php print $value; ?>
+            </li>
+            <?php endforeach; ?>
+        </ul>
+	<?php print 'Mano flashback' . $flashback_text . "<br>"; ?>
+        <?php print 'Draugo flashbackas' . $flashback_text1; ?>
 </body>
 </html>
