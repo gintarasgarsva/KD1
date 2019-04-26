@@ -1,6 +1,6 @@
 <?php
 
-	$mano_atmintis = [
+    $mano_atmintis = [
 	    'Penktadienis',
 	    'Paskaita',
 	    'Baras',
@@ -10,8 +10,8 @@
 	    'Alus',
 	    'Pirmadienis',
 	    'Paskaita'
-	];
-        $draugo_atmintis = [
+    ];
+    $draugo_atmintis = [
             'Penktadienis',
             'Rytas',
             'Baras',
@@ -22,14 +22,14 @@
             'Degtine',
             'Samagonas',
             'Antradienis'
-        ];
-        $rand_flashback1 = rand(0, count($draugo_atmintis) - 1);
-        $flashback_text1 = '#' .$rand_flashback1 . ': ' . $draugo_atmintis[$rand_flashback1] ;
+    ];
+    $rand_flashback1 = rand(0, count($draugo_atmintis) - 1);
+    $flashback_text1 = '#' .$rand_flashback1 . ': ' . $draugo_atmintis[$rand_flashback1] ;
         
-	$rand_flashback = rand(0, count($mano_atmintis) - 1);
-        $flashback_text = '#' .$rand_flashback . ': ' . $mano_atmintis[$rand_flashback] ;
+    $rand_flashback = rand(0, count($mano_atmintis) - 1);
+    $flashback_text = '#' .$rand_flashback . ': ' . $mano_atmintis[$rand_flashback] ;
         
-        $bendri_atsiminimai = array_intersect( $mano_atmintis, $draugo_atmintis);
+    $bendri_atsiminimai = array_intersect( $mano_atmintis, $draugo_atmintis);
         
 ?>
 <!DOCTYPE html>
@@ -58,12 +58,13 @@
             <?php endforeach; ?>
         </ul><!-- endforeach -->
         <h3>Sutape prisiminimai:</h3>
-        <ul> <?php foreach($bendri_atsiminimai as $value): ?>
+        <ul> <!-- foreach -->
+            <?php foreach($bendri_atsiminimai as $value): ?>
             <li>
                <?php print $value; ?>
             </li>
             <?php endforeach; ?>
-        </ul>
+        </ul> <!-- endforeach -->
 	<?php print 'Mano flashback' . $flashback_text . "<br>"; ?>
         <?php print 'Draugo flashbackas' . $flashback_text1; ?>
 </body>
