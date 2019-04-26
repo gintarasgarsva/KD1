@@ -23,7 +23,6 @@
             'Samagonas',
             'Antradienis'
         ];
-        
         $rand_flashback1 = rand(0, count($draugo_atmintis) - 1);
         $flashback_text1 = '#' .$rand_flashback1 . ': ' . $draugo_atmintis[$rand_flashback1] ;
         
@@ -31,6 +30,7 @@
         $flashback_text = '#' .$rand_flashback . ': ' . $mano_atmintis[$rand_flashback] ;
         
         $bendri_atsiminimai = array_intersect( $mano_atmintis, $draugo_atmintis);
+        
 ?>
 <!DOCTYPE html>
 <html>
