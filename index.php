@@ -17,10 +17,9 @@ $ataskaita = [
         'name' => 'Vovkos garazas',
         'amount' => '-340',
     ],
-        ]
+        ];
         
 ?>
-
 <!DOCTYPE html>
 <html>
     <head>
