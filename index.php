@@ -1,71 +1,52 @@
 <?php
-$daiktai = [
-    [
-        'name' => 'Kremas',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Riesutai',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Raktai',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Telefonas',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Lupdazis',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Vaistai',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-    [
-        'name' => 'Kojines',
-        'size' => 'x',
-        'color' => 'y',
-    ],
-];
 
-$daiktai['color']['y'] = rand(0, 1);
-if ($daiktai['color']['y'] > 0) {
-    $color = 'Sviesus';
-} else {
-    $color = 'Tamsus';
+function slot_run() {
+    $array = [
+        [rand(0, 1), rand(0, 1), rand(0, 1)],
+        [rand(0, 1), rand(0, 1), rand(0, 1)],
+        [rand(0, 1), rand(0, 1), rand(0, 1)]
+    ];
+    return $array;
 }
-$size = rand(50, 300);
-$daiktai['size']['x'] = $size;
 
-$random_name = $daiktai[rand(0, 6)];
-$name = $random_name['name'];
-
-$rankinuko_turis = rand(100, 1000);
-
-$text = "$name uzima $size cm3, Daiktas $color";
-
+$array1 = slot_run();
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
         <style>
+            .blue{
+                border: 1px solid black;
+                background-color: blue;
+                width: 50px;
+                height: 50px;
+                display:inline-block;
 
+            }
+            .yellow{
+                border: 1px solid black;
+                background-color: yellow;
+                width: 50px;
+                height: 50px;
+                display:inline-block;
+            }
         </style>
     </head>
     <body>
-        <p><?php print $text; ?></p>
+        <?php foreach ($array1 as $index): ?>
+            <section>
+                <?php foreach ($index as $value): ?>
+                    <?php if ($value > 0): ?>
+                        <div class="blue"></div>
+                    <?php else: ?>
+                        <div class="yellow"></div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </section>
+        <?php endforeach; ?>
+
+
     </body>
 </html>
+
