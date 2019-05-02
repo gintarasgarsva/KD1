@@ -46,7 +46,7 @@ $array1 = slot_run(15);
         <?php foreach ($array1 as $index): ?>
             <section>
                 <?php foreach ($index as $value): ?>
-                    <?php if ($value > 0): ?>
+                    <?php if ($value): ?>
                         <div class="blue"></div>
                     <?php else: ?>
                         <div class="yellow"></div>
