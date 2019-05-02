@@ -1,12 +1,12 @@
 <?php
 
-function slot_run($skaicius) {
+function slot_run($size) {
     $array = [];
 
-    for ($horizontal = 0; $horizontal < $skaicius; $horizontal++) {
+    for ($horizontal = 0; $horizontal < $size; $horizontal++) {
         $row = [];
 
-        for ($vertical = 0; $vertical < $skaicius; $vertical++) {
+        for ($vertical = 0; $vertical < $size; $vertical++) {
             $row[] = rand(0, 1);
         }
         $array[] = $row;
@@ -15,6 +15,6 @@ function slot_run($skaicius) {
     return $array;
 }
 
-var_dump(slot_run(5));
+var_dump(slot_run(15));
 
 
