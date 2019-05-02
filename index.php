@@ -1,23 +1,20 @@
 <?php
 
-$text = "blt tas gaidys uzpiso mane.";
-$keiksmai = ['blt', 'uzpiso'];
-$cenzura = ['***', '******'];
+function slot_run($skaicius) {
+    $array = [];
 
-$new_text = str_replace($keiksmai, $cenzura, $text);
+    for ($horizontal = 0; $horizontal < $skaicius; $horizontal++) {
+        $row = [];
 
-print $new_text;
-?>
+        for ($vertical = 0; $vertical < $skaicius; $vertical++) {
+            $row[] = rand(0, 1);
+        }
+        $array[] = $row;
+    }
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <style>
-          
-        </style>
-    </head>
-    <body>
-      
-    </body>
-</html>
+    return $array;
+}
+
+var_dump(slot_run(5));
+
 
