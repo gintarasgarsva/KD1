@@ -17,7 +17,7 @@ $situacijos = [
     ],
     'level_3' => [
         'Neuzsikure kibiras nes lauke -30',
-        'Gavai bauda uz parkiga',
+        'Nedavei rukyt bachurams, gavai streliu',
         'Gavai bauda uz rukyma balkone',
         'Nusijobinai paslydes ant ledo',
         'Xujova po pjankes',
