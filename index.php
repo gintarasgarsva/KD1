@@ -1,10 +1,11 @@
 <?php
 
-$x = 0;
-$b = &$x;
+$roll_joints = true;
 
-unset($b);
+$joint1 = &$roll_joints;
+$joint2 = &$joint1;
+$joint3 = &$joint2;
 
-$b = 1;
-
-print $x;
+print $joint1;
+print $joint2;
+print $joint3;
