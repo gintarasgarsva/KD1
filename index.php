@@ -1,11 +1,10 @@
 <?php
 
 $x = 0;
+$b = &$x;
 
-function change_x(&$x) {
-    $x = 1;
-}
+unset($b);
 
-change_x($x);
+$b = 1;
 
 print $x;
