@@ -5,6 +5,7 @@ $verte = 1;
 if (isset($_POST['bbd'])) {
     $verte = $_POST['bbd'] + 1;
 }
+
 $bananas = range(1, $verte);
 
 ?>
