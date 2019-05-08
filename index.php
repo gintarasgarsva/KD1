@@ -14,7 +14,8 @@ if (isset($_POST['bbd'])) {
     <body>
         <form action="index.php" method="POST">
             <button type="submit" name="bbd" value="<?php print $verte; ?>">
-                <?php print $verte; ?></button>
+                <?php print $verte; ?>
+            </button>
         </form>
     </body>
 </html>
