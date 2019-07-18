@@ -1,28 +1,38 @@
 <?php
-
 // Uzkraunam visus reikalingus failus
 require '../config.php';
 require ROOT . '/functions/file.php';
 require ROOT . '/functions/html/builder.php';
 require ROOT . '/functions/form/core.php';
 
-
 class ThailandSurprise {
+
     public $clothes;
     private $balls;
 
-    public function __construct($clothes){
+    public function __construct($clothes) {
         $this->clothes = $clothes;
         $this->balls = rand(true, false);
     }
+
+    public function attachBalls() {
+        $this->balls = true;
+    }
+
+    public function detachBalls() {
+        $this->balls = false;
+    }
+
 }
 
 $clothes = new ThailandSurprise('miniskirt');
 
 $balls = new ThailandSurprise('miniskirt');
 
-var_dump($clothes, $balls);
+$balls->attachBalls();
+$balls->detachBalls();
 
+var_dump($clothes, $balls);
 ?>
 <html>
     <head>
@@ -38,8 +48,8 @@ var_dump($clothes, $balls);
     </head>
     <body>
 
-        
-        
-      
+
+
+
     </body>
 </html>
