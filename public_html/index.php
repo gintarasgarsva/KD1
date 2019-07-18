@@ -10,10 +10,12 @@ class ThailandSurprise {
 
     public $clothes;
     private $balls;
+    private $name;
 
-    public function __construct($clothes) {
+    public function __construct($clothes, $name) {
         $this->clothes = $clothes;
         $this->balls = rand(true, false);
+        $this->name = $name;
     }
 
     public function attachBalls() {
@@ -34,9 +36,11 @@ class ThailandSurprise {
 
 }
 
-$clothes = new ThailandSurprise('miniskirt');
+$clothes = new ThailandSurprise('miniskirt', 'Sunny');
 
-$person = new ThailandSurprise('miniskirt');
+$person = new ThailandSurprise('miniskirt', 'Sunny');
+
+var_dump($clothes, $person);
 
 $person->getPhoto();
 
