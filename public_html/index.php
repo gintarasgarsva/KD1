@@ -9,20 +9,33 @@ require ROOT . '/functions/form/core.php';
 
 class ThailandSurprise {
     public $clothes;
-    
-    public function __construct($clothes){
+    private $balls;
+
+    public function __construct($clothes, $balls){
         $this->clothes = $clothes;
+        $this->balls = $balls;
     }
 }
+$belekas = rand(true, false);
+$clothes = new ThailandSurprise('miniskirt', $belekas);
 
-$clothes = new ThailandSurprise('miniskirt');
+$balls = new ThailandSurprise('miniskirt', $belekas);
 
-var_dump($clothes);
+var_dump($clothes, $balls);
 
+///////////////////////////////////////////////////////////////
 
+// kitas budas be konstruktoriaus:
 
-
-
+//class ThailandSurprise1 {
+//    public $clothes;
+//    
+//}
+//
+//$transvestitas = new ThailandSurprise1();
+//$transvestitas->clothes = 'Miniskirt';
+//
+//var_dump($transvestitas);
 
 
 
