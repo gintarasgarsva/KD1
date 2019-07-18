@@ -11,33 +11,17 @@ class ThailandSurprise {
     public $clothes;
     private $balls;
 
-    public function __construct($clothes, $balls){
+    public function __construct($clothes){
         $this->clothes = $clothes;
-        $this->balls = $balls;
+        $this->balls = rand(true, false);
     }
 }
-$belekas = rand(true, false);
-$clothes = new ThailandSurprise('miniskirt', $belekas);
 
-$balls = new ThailandSurprise('miniskirt', $belekas);
+$clothes = new ThailandSurprise('miniskirt');
+
+$balls = new ThailandSurprise('miniskirt');
 
 var_dump($clothes, $balls);
-
-///////////////////////////////////////////////////////////////
-
-// kitas budas be konstruktoriaus:
-
-//class ThailandSurprise1 {
-//    public $clothes;
-//    
-//}
-//
-//$transvestitas = new ThailandSurprise1();
-//$transvestitas->clothes = 'Miniskirt';
-//
-//var_dump($transvestitas);
-
-
 
 ?>
 <html>
