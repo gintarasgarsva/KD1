@@ -96,7 +96,7 @@ class FileDb {
                 $this->data[$table_name][$row_id] = $row;
             }           
         }
-        return true;
+        return false;
     }
 
 }
