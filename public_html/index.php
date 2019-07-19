@@ -65,10 +65,10 @@ class FileDb {
         }
     }
 
-    public function dropTable($table) {
+    public function dropTable($table_name) {
 
-        if (isset($this->data[$table])) {
-            unset($this->data[$table]);
+        if (isset($this->data[$table_name])) {
+            unset($this->data[$table_name]);
             return true;
         } else {
             return false;
