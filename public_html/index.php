@@ -1,10 +1,10 @@
 <?php
+
 // Uzkraunam visus reikalingus failus
 require '../config.php';
 require ROOT . '/functions/file.php';
 require ROOT . '/functions/html/builder.php';
 require ROOT . '/functions/form/core.php';
-
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -14,9 +14,8 @@ class FileDb {
     private $file_name;
     private $data;
 
-    public function __construct($file_name, $data) {
+    public function __construct($file_name) {
         $this->file_name = $file_name;
-        $this->data = $data;
     }
 
     public function load() {
@@ -55,20 +54,37 @@ class FileDb {
             return false;
         }
     }
-    
-    public function createTable($table_name){
-        
-        if (isset($this->data[$table_name])){
+
+    public function createTable($table_name) {
+
+        if (isset($this->data[$table_name])) {
             return false;
-        }else{
+        } else {
             $this->data[$table_name] = [];
             return true;
-        }   
+        }
+    }
+
+    public function dropTable($table) {
+
+        if (isset($this->data[$table])) {
+            unset($this->data[$table]);
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
 
-$db = new FileDb(STORAGE_FILE, 'bbd');
+$db = new FileDb(STORAGE_FILE);
+
+$db->createTable('belekas');
+$db->createTable('bybis');
+$db->dropTable('belekas');
+
+var_dump($db);
+
 ?>
 <html>
     <head>
