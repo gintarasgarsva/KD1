@@ -5,6 +5,10 @@ require ROOT . '/functions/file.php';
 require ROOT . '/functions/html/builder.php';
 require ROOT . '/functions/form/core.php';
 
+
+//////////////////////////////////////////////////////////////////////////
+
+
 class FileDb {
 
     private $file_name;
@@ -41,6 +45,25 @@ class FileDb {
     public function save() {
 
         array_to_file($this->data_array, STORAGE_FILE);
+
+        $string = json_encode($this->data_array);
+        $file = file_put_contents($this->file_name, $string);
+
+        if ($file !== false) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public function createTable($table_name){
+        
+        if (isset($this->data[$table_name])){
+            return false;
+        }else{
+            $this->data[$table_name] = [];
+            return true;
+        }   
     }
 
 }
