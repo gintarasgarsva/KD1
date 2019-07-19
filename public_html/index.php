@@ -1,5 +1,4 @@
 <?php
-
 // Uzkraunam visus reikalingus failus
 require '../config.php';
 require ROOT . '/functions/file.php';
@@ -55,23 +54,45 @@ class FileDb {
         }
     }
 
-    public function createTable($table_name) {
-
+    public function tableExists($table_name) {
         if (isset($this->data[$table_name])) {
-            return false;
-        } else {
-            $this->data[$table_name] = [];
             return true;
+        } else {
+            return false;
         }
     }
 
-    public function dropTable($table_name) {
+    public function createTable($table_name) {
+        if (!$this->tableExists($table_name)) {
+            $this->data[$table_name] = [];
+            return true;
+        }
+        return false;
+    }
 
-        if (isset($this->data[$table_name])) {
+    public function dropTable($table_name) {
+        if ($this->tableExists($table_name)) {
             unset($this->data[$table_name]);
             return true;
         } else {
             return false;
+        }
+    }
+
+    public function truncateTable($table_name) {
+        if ($this->tableExists($table_name)) {
+            $this->data[$table_name] = [];
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public function insertRow($table_name, $row, $row_id = null){
+        if ($this->tableExists($table_name) && $row_id !== null){
+            $this->data[$table_name][$row_id] = $row;
+        }else{
+            $this->data[$table_name][] = $row;
         }
     }
 
@@ -80,11 +101,9 @@ class FileDb {
 $db = new FileDb(STORAGE_FILE);
 
 $db->createTable('belekas');
-$db->createTable('bybis');
-$db->dropTable('belekas');
+$db->truncateTable('belekas');
 
 var_dump($db);
-
 ?>
 <html>
     <head>
